@@ -1,0 +1,114 @@
+type: Namespace
+api_version: core/v2
+metadata:
+  name: default
+spec:
+  name: default
+---
+type: Namespace
+api_version: core/v2
+metadata:
+  name: ops
+spec:
+  name: ops
+---
+type: User
+api_version: core/v2
+metadata: {}
+spec:
+  disabled: false
+  groups:
+  - ops
+  username: alice
+---
+type: User
+api_version: core/v2
+metadata: {}
+spec:
+  disabled: false
+  username: bob
+---
+type: Role
+api_version: core/v2
+metadata:
+  name: ops-admin
+  namespace: ops
+spec:
+  rules:
+  - resource_names: null
+    resources:
+    - assets
+    - checks
+    - entities
+    - events
+    - filters
+    - handlers
+    - hooks
+    - mutators
+    - rolebindings
+    - roles
+    - silenced
+    verbs:
+    - get
+    - list
+    - create
+    - update
+    - delete
+---
+type: RoleBinding
+api_version: core/v2
+metadata:
+  name: ops-group-admin
+  namespace: ops
+spec:
+  role_ref:
+    name: ops-admin
+    type: Role
+  subjects:
+  - name: ops
+    type: Group
+---
+type: ClusterRole
+api_version: core/v2
+metadata:
+  name: default-admin
+spec:
+  rules:
+  - resource_names: null
+    resources:
+    - assets
+    - checks
+    - entities
+    - events
+    - filters
+    - handlers
+    - hooks
+    - mutators
+    - rolebindings
+    - roles
+    - silenced
+    - cluster
+    - clusterrolebindings
+    - clusterroles
+    - namespaces
+    - users
+    - authproviders
+    - license
+    verbs:
+    - get
+    - list
+    - create
+    - update
+    - delete
+---
+type: ClusterRoleBinding
+api_version: core/v2
+metadata:
+  name: bob-default-admin
+spec:
+  role_ref:
+    name: default-admin
+    type: ClusterRole
+  subjects:
+  - name: bob
+    type: User

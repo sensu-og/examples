@@ -1,0 +1,233 @@
+# =============
+#    Assets
+# =============
+---
+# Influx DB handler asset for amd64 Linux
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-influxdb-handler_linux_amd64
+  labels: 
+  annotations:
+    sensio.io.bonsai.url: https://assets.bonsai.sensu.io/b28f8719a48aa8ea80c603f97e402975a98cea47/sensu-influxdb-handler_3.1.2_linux_amd64.tar.gz
+    sensio.io.bonsai.tier: Supported
+    sensio.io.bonsai.version: 3.1.2
+    sensio.io.bonsai.tags: 
+spec:
+  url: https://assets.bonsai.sensu.io/b28f8719a48aa8ea80c603f97e402975a98cea47/sensu-influxdb-handler_3.1.2_linux_amd64.tar.gz
+  sha512: 612c6ff9928841090c4d23bf20aaf7558e4eed8977a848cf9e2899bb13a13e7540bac2b63e324f39d9b1257bb479676bc155b24e21bf93c722b812b0f15cb3bd
+  filters:
+  - entity.system.os == 'linux'
+  - entity.system.arch == 'amd64'
+# PagerDuty handler asset for amd64 Linux
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-pagerduty-handler_linux_amd64
+  labels: 
+  annotations:
+    sensio.io.bonsai.url: https://assets.bonsai.sensu.io/698710262d59c72ace3e31524960630dc1e4f190/sensu-pagerduty-handler_1.1.0_linux_amd64.tar.gz
+    sensio.io.bonsai.tier: Supported
+    sensio.io.bonsai.version: 1.1.0
+    sensio.io.bonsai.tags: handler
+spec:
+  url: https://assets.bonsai.sensu.io/698710262d59c72ace3e31524960630dc1e4f190/sensu-pagerduty-handler_1.1.0_linux_amd64.tar.gz
+  sha512: e93ec4465af5a2057664e8c3cd68e9352457b81315b97578eaae5e21f0cf7419d4fc36feb0155eeb0dd5a227e267307a58ee58a9f3e85bf3d44da3738bf691ca
+  filters:
+  - entity.system.os == 'linux'
+  - entity.system.arch == 'amd64'
+---
+# Slack handler asset for amd64 Linux
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-slack-handler_linux_amd64
+  labels: 
+  annotations:
+    sensio.io.bonsai.url: https://assets.bonsai.sensu.io/3149de09525d5e042a83edbb6eb46152b02b5a65/sensu-slack-handler_1.0.3_linux_amd64.tar.gz
+    sensio.io.bonsai.tier: Supported
+    sensio.io.bonsai.version: 1.0.3
+    sensio.io.bonsai.tags: 
+spec:
+  url: https://assets.bonsai.sensu.io/3149de09525d5e042a83edbb6eb46152b02b5a65/sensu-slack-handler_1.0.3_linux_amd64.tar.gz
+  sha512: 68720865127fbc7c2fe16ca4d7bbf2a187a2df703f4b4acae1c93e8a66556e9079e1270521999b5871473e6c851f51b34097c54fdb8d18eedb7064df9019adc8
+  filters:
+  - entity.system.os == 'linux'
+  - entity.system.arch == 'amd64'
+---
+# CPU checks asset for amd64 RHEL
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-plugins-cpu-checks_centos_amd64
+  labels: 
+  annotations:
+    sensio.io.bonsai.url: https://assets.bonsai.sensu.io/68546e739d96fd695655b77b35b5aabfbabeb056/sensu-plugins-cpu-checks_4.0.0_centos_linux_amd64.tar.gz
+    sensio.io.bonsai.tier: Community
+    sensio.io.bonsai.version: 4.0.0
+    sensio.io.bonsai.tags: ruby-runtime-2.4.4
+spec:
+  url: https://assets.bonsai.sensu.io/68546e739d96fd695655b77b35b5aabfbabeb056/sensu-plugins-cpu-checks_4.0.0_centos_linux_amd64.tar.gz
+  sha512: 518e7c17cf670393045bff4af318e1d35955bfde166e9ceec2b469109252f79043ed133241c4dc96501b6636a1ec5e008ea9ce055d1609865635d4f004d7187b
+  filters:
+  - entity.system.os == 'linux'
+  - entity.system.arch == 'amd64'
+  - entity.system.platform == 'rhel'
+---
+# Ruby runtime asset for amd64 RHEL 7
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-ruby-runtime_centos7_amd64
+  labels: 
+  annotations:
+    sensio.io.bonsai.url: https://assets.bonsai.sensu.io/03d08cdfc649500b7e8cd1708bb9bb93d91fea9e/sensu-ruby-runtime_0.0.8_ruby-2.4.4_centos7_linux_amd64.tar.gz
+    sensio.io.bonsai.tier: Community
+    sensio.io.bonsai.version: 0.0.8
+    sensio.io.bonsai.tags: 
+spec:
+  url: https://assets.bonsai.sensu.io/03d08cdfc649500b7e8cd1708bb9bb93d91fea9e/sensu-ruby-runtime_0.0.8_ruby-2.4.4_centos7_linux_amd64.tar.gz
+  sha512: 8d6e7ef9bab057493ab25c4d5b9d68d324600b032b467e09cc26450141c1d4868fcd74704b7fc2c4523c23021c80291ee53f95f139d11a03b9fbf506d3455fbe
+  filters:
+  - entity.system.os == 'linux'
+  - entity.system.arch == 'amd64'
+  - entity.system.platform_family == 'rhel'
+  - entity.system.platform_version.split('.')[0] == '7'
+# =============
+#    Handlers
+# =============
+---
+# InfluxDB handler
+api_version: core/v2
+metadata:
+  name: influxdb
+spec:
+  command: sensu-influxdb-handler -d sensu
+  env_vars:
+  - INFLUXDB_ADDR=CHANGEME
+  - INFLUXDB_USER=CHANGEME
+  - INFLUXDB_PASS=CHANGEME
+  filters:
+  - has_metrics
+  handlers: null
+  runtime_assets:
+  - sensu-influxdb-handler_linux_amd64
+  timeout: 0
+  type: pipe
+---
+# Handlers to use for agent keepalive events
+type: Handler
+api_version: core/v2
+metadata:
+  name: keepalive
+spec:
+  env_vars: null
+  filters: null
+  handlers:
+  - slack
+  - pagerduty
+  runtime_assets: null
+  timeout: 0
+  type: set
+---
+# PagerDuty handler
+type: Handler
+api_version: core/v2
+metadata:
+  name: pagerduty
+spec:
+  command: sensu-pagerduty-handler
+  env_vars:
+  - PAGERDUTY_TOKEN=CHANGEME
+  filters:
+  - is_incident
+  - not_silenced
+  handlers: null
+  runtime_assets:
+  - sensu-pagerduty-handler_linux_amd64
+  timeout: 0
+  type: pipe
+---
+# Slack handler
+type: Handler
+api_version: core/v2
+metadata:
+  name: slack
+spec:
+  command: sensu-slack-handler --channel '#CHANGEME' --timeout 20 --username 'CHANGEME'
+  env_vars:
+  - SLACK_WEBHOOK_URL=CHANGEME
+  filters:
+  - is_incident
+  - not_silenced
+  handlers: null
+  runtime_assets:
+  - sensu-slack-handler_linux_amd64
+  timeout: 0
+  type: pipe
+# =============
+#    Checks
+# =============
+---
+# CPU check with Slack alert
+# Requires at least one Sensu agent with the system subscription
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: check_cpu
+spec:
+  check_hooks: null
+  command: check-cpu.rb -w 85 -c 99
+  env_vars: null
+  handlers:
+  - slack
+  high_flap_threshold: 0
+  interval: 60
+  low_flap_threshold: 0
+  output_metric_format: ""
+  output_metric_handlers: null
+  proxy_entity_name: ""
+  publish: true
+  round_robin: false
+  runtime_assets:
+  - sensu-plugins-cpu-checks_centos_amd64
+  - sensu-ruby-runtime_centos7_amd64
+  stdin: false
+  subdue: null
+  subscriptions:
+  - system
+  timeout: 0
+  ttl: 0
+---
+# CPU metric check
+# Requires at least one Sensu agent with the system subscription
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: cpu_metrics
+spec:
+  check_hooks: null
+  command: metrics-cpu.rb
+  env_vars: null
+  handlers:
+  high_flap_threshold: 0
+  interval: 60
+  low_flap_threshold: 0
+  output_metric_format: graphite_plaintext
+  output_metric_handlers:
+  - sensu-influxdb-handler_linux_amd64
+  proxy_entity_name: ""
+  publish: true
+  round_robin: false
+  runtime_assets:
+  - sensu-plugins-cpu-checks_centos_amd64
+  - sensu-ruby-runtime_centos7_amd64
+  stdin: false
+  subdue: null
+  subscriptions:
+  - system
+  timeout: 0
+  ttl: 0

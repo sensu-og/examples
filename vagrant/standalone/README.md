@@ -16,7 +16,7 @@ This example spins up a CentOS 7 virtual machine with Virtual Box and installs:
 Clone the repository:
 
 ```
-git clone https://github.com/sensu/sandbox && cd sandbox/sensu-go
+git clone https://github.com/sensu/examples && cd examples/vagrant/standalone
 ```
 
 Start the virtual machine:
