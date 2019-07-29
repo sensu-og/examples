@@ -1,3 +1,5 @@
+![Sensu logo](https://raw.githubusercontent.com/sensu/sandbox/master/images/sensu-logo.png)
+
 # Examples
 
 This repo is a useful trove of configs to help you get started with Sensu.
