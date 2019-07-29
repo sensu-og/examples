@@ -8,27 +8,24 @@ To learn about deploying Sensu securely, see the [deployment guide](https://docs
 
 ## README template
 
-```
-# Title
+    # Title
 
-<!-- Describe the purpose of the example and list its contents -->
+    <!-- Describe the purpose of the example and list its contents -->
 
-### Prerequisites
+    ### Prerequisites
 
-<!-- List any requirements before using the example-->
+    <!-- List any requirements before using the example-->
 
-### Operation
+    ### Operation
 
-<!-- How to spin up the example -->
+    <!-- How to spin up the example -->
 
-Clone the repository:
+    Clone the repository:
 
-```
-git clone https://github.com/sensu/examples && cd examples/
-```
+    ```
+    git clone https://github.com/sensu/examples && cd examples/
+    ```
 
-### Resources
+    ### Resources
 
-<!-- Link to relevant docs, posts, or other examples -->
-
-```
+    <!-- Link to relevant docs, posts, or other examples -->
