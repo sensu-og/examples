@@ -35,7 +35,7 @@ sensuctl configure -n \
 
 ### Resources
 
-- [Server monitoring examples](./server-monitoring)
+- [Server monitoring examples](../../server-monitoring)
 
 [1]: https://docs.sensu.io/sensu-go/latest/api/overview
 [2]: https://docs.docker.com/compose/install/
