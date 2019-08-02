@@ -33,9 +33,9 @@ sensuctl configure -n \
 --url 'http://localhost:8080'
 ```
 
-### Goes well with
+### Resources
 
-- [Server monitoring][]
+- [Server monitoring examples](./server-monitoring)
 
 [1]: https://docs.sensu.io/sensu-go/latest/api/overview
 [2]: https://docs.docker.com/compose/install/
