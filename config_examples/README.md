@@ -50,26 +50,55 @@ Checks are the resoure in Sensu that gathers data. They can be metric checks (ga
 - []()
 - []()
 
+###### AWS resources
+
 ##### Go metric checks
 
 ###### System resources
 
 ###### Web resources
 
+###### AWS resources
 
 #### Status check examples
 
 ##### Ruby status checks
-- []()
-- []()
-- []()
+
+###### System resources
+- [Disk]()
+- [CPU]()
+- [RAM]()
+- [Network]()
+
+###### Web resources
+
+- [HTTP]()
 - []()
 - []()
 - []()
 - []()
 - []()
 
+###### AWS resources
+
 ##### Go metric check examples
+
+###### System resources
+- [Disk]()
+- [CPU]()
+- [RAM]()
+- [Network]()
+
+###### Web resources
+
+- [HTTP]()
+- []()
+- []()
+- []()
+- []()
+- []()
+
+###### AWS resources
 
 ### Filters
 
@@ -100,10 +129,11 @@ Metric handlers are responsible for handling and routing metric data.
 #### Miscellaneous handlers
 
 - [Remediation handler]()
+- [Ansible Tower handler]()
 
 ### Hooks
 
-Hooks are a way to enrich event data that you gather. It's not recommended to use them as 
+Hooks are a way to enrich event data that you gather. It's not recommended to use them as a means of remediation. If you're looking to remediate issues with Sensu, consider using the [remediation handler]() instead
 
 ## Config Management
 
